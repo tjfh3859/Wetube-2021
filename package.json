@@ -1,0 +1,19 @@
+{
+  "name": "wetube",
+  "version": "1.0.0",
+  "description": "Youtube Clone",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tjfh3859/Wetube-2021.git"
+  },
+  "author": "Seonho",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tjfh3859/Wetube-2021/issues"
+  },
+  "homepage": "https://github.com/tjfh3859/Wetube-2021#readme",
+  "dependencies": {
+    "npm": "^7.11.2"
+  }
+}
