@@ -7,6 +7,9 @@
     "type": "git",
     "url": "git+https://github.com/tjfh3859/Wetube-2021.git"
   },
+  "scripts": {
+    "start": "node index.js"
+  },
   "author": "Seonho",
   "license": "ISC",
   "bugs": {
@@ -14,6 +17,6 @@
   },
   "homepage": "https://github.com/tjfh3859/Wetube-2021#readme",
   "dependencies": {
-    "npm": "^7.11.2"
+    "express": "^4.17.1"
   }
 }
