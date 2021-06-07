@@ -10,7 +10,7 @@
   "scripts": {
     "dev": "nodemon --exec babel-node src/init.js"
   },
-  "author": "Seonho",
+  "author": "tjfh3859",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/tjfh3859/Wetube-2021/issues"
