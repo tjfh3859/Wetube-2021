@@ -8,7 +8,8 @@
     "url": "git+https://github.com/tjfh3859/Wetube-2021.git"
   },
   "scripts": {
-    "dev": "nodemon --exec babel-node src/init.js"
+    "dev": "nodemon --exec babel-node src/init.js",
+    "assets": "webpack --config webpack.config.js"
   },
   "author": "tjfh3859",
   "license": "ISC",
@@ -32,6 +33,9 @@
     "@babel/core": "^7.14.0",
     "@babel/node": "^7.13.13",
     "@babel/preset-env": "^7.14.0",
-    "nodemon": "^2.0.7"
+    "babel-loader": "^8.2.2",
+    "nodemon": "^2.0.7",
+    "webpack": "^5.39.1",
+    "webpack-cli": "^4.7.2"
   }
 }
