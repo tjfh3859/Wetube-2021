@@ -16,7 +16,7 @@ module.exports = {
     }),
   ],
   output: {
-    filename: "js/[namec].js",
+    filename: "js/[name].js",
     path: path.resolve(__dirname, "assets"),
     clean: true,
   },
