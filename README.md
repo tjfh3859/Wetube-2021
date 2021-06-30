@@ -1,6 +1,7 @@
 # Clone Youtube
 
 - Nomad Coders lectures
+  (https://nomadcoders.co/)
 
 # 참고 사이트 및 다운로드
 
