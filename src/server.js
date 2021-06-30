@@ -17,6 +17,7 @@ app.set("views", "src/views");
 
 app.use(logger);
 app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 app.use(
   session({
