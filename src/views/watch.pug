@@ -36,13 +36,13 @@ block content
                 textarea(cols="30", rows="10", placeholder="Write a comment...")
                 button Add Comment
     div.video__comments
-        ul 
+        ul
             each comment in video.comments.reverse()
-                li.video__comment(date-id=comment.id)
+                li.video__comment(data-id=comment._id)
                     i.fas.fa-comment
                     span  #{comment.text}
-                    if String(comment.owner._id) === String(loggedInUser._id)
-                        span  ❌
+                    if String(comment.owner) === String(loggedInUser._id)
+                        span.deleteComment  ❌
 
     
 block scripts 

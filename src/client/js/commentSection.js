@@ -1,5 +1,8 @@
+const { listenerCount } = require("events");
+
 const videoContainer = document.getElementById("videoContainer");
 const form = document.getElementById("commentForm");
+const deleteBtn = document.querySelectorAll(".deleteComment");
 
 const addComment = (text, id) => {
   const videoComments = document.querySelector(".video__comments ul");
@@ -16,6 +19,7 @@ const addComment = (text, id) => {
   newComment.appendChild(span);
   newComment.appendChild(deleteIcon);
   videoComments.prepend(newComment);
+  deleteIcon.addEventListener("click", handleDelete);
 };
 
 const handleSubmit = async (event) => {
@@ -27,7 +31,6 @@ const handleSubmit = async (event) => {
     return;
   }
   const response = await fetch(`/api/videos/${videoId}/comment`, {
-    //method:"DELETE"
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -41,6 +44,24 @@ const handleSubmit = async (event) => {
   }
 };
 
+const handleDelete = async (event) => {
+  const commentList = event.target.parentNode;
+  const commentId = commentList.dataset.id;
+  commentList.remove();
+  const reponse = await fetch(`/api/comments/${commentId}`, {
+    method: "DELETE",
+  });
+};
+
+// const response = await fetch(`/api/comments/${commentId}`, {
+//   method:"DELETE",
+// clinet/js/videoPlayer.js handleEnded 참고
+// controller에서 사용자가 댓글의 작성자가 맞는지 확인
+
 if (form) {
   form.addEventListener("submit", handleSubmit);
+}
+
+for (const deleteComment of deleteBtn) {
+  deleteComment.addEventListener("click", handleDelete);
 }
